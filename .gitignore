@@ -2,3 +2,9 @@
 __pycache__/
 *.tmp
 .env*
+
+node_modules/
+lib/
+*.tgz
+
+!docs/forma-country-icons-*.tgz

@@ -1,0 +1,78 @@
+{
+  "name": "forma-country-icons",
+  "version": "1.1.0",
+  "description": "242 country and region SVG silhouettes with React, Vue 3 and vanilla JavaScript support",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "import": "./lib/index.js"
+    },
+    "./icons/*": {
+      "types": "./lib/icons/*.d.ts",
+      "import": "./lib/icons/*.js"
+    },
+    "./react": {
+      "types": "./lib/react.d.ts",
+      "import": "./lib/react.js"
+    },
+    "./vue": {
+      "types": "./lib/vue.d.ts",
+      "import": "./lib/vue.js"
+    },
+    "./svg/*": "./docs/svg/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "docs/svg",
+    "LICENSE",
+    "DATA-LICENSE.md"
+  ],
+  "scripts": {
+    "build": "node scripts/build-package.mjs",
+    "test": "node --test",
+    "prepack": "npm run build && npm test",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhangv/forma-icons.git"
+  },
+  "homepage": "https://zhangv.github.io/forma-icons/",
+  "bugs": {
+    "url": "https://github.com/zhangv/forma-icons/issues"
+  },
+  "keywords": [
+    "svg",
+    "icons",
+    "country",
+    "map",
+    "react",
+    "vue",
+    "silhouette"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
