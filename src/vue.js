@@ -1,8 +1,8 @@
 import { defineComponent, h } from 'vue';
 import { normalize } from './core.js';
 
-export const FormaIcon = defineComponent({
-  name: 'FormaIcon', inheritAttrs: false,
+export const RegionMapIcon = defineComponent({
+  name: 'RegionMapIcon', inheritAttrs: false,
   props: {
     icon: { type: Object, required: true }, variant: { type: String, default: 'outline' },
     size: { type: [Number, String], default: 256 }, color: { type: String, default: 'currentColor' },

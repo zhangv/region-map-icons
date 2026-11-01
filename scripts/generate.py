@@ -32,6 +32,6 @@ for style in ['outline','solid']:
   target=folder/(x['code']+'.svg'); temporary=target.with_suffix('.svg.tmp')
   temporary.write_text(f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path {attrs} fill-rule="evenodd" d="{x["d"]}"/></svg>')
   temporary.replace(target)
-with zipfile.ZipFile(root/'docs/forma-svg-library.zip','w',zipfile.ZIP_DEFLATED) as z:
+with zipfile.ZipFile(root/'docs/region-map-icons-svg-library.zip','w',zipfile.ZIP_DEFLATED) as z:
  for path in (root/'docs/svg').rglob('*.svg'):z.write(path,'svg/'+str(path.relative_to(root/'docs/svg')))
 print(f'{len(items)} shapes, {len(items)*2} SVGs')

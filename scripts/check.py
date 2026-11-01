@@ -11,7 +11,7 @@ def ring_count(code):
     return sum(len(p) for p in polygons)
 assert by_code['cn']['d'].count('M') == ring_count('CHN') + ring_count('TWN')
 assert by_code['tw']['d'].count('M') == ring_count('TWN')
-with zipfile.ZipFile(root/'docs/forma-svg-library.zip') as archive:
+with zipfile.ZipFile(root/'docs/region-map-icons-svg-library.zip') as archive:
     assert len(archive.namelist()) == 484
     for style in ['outline', 'solid']:
         for item in items:

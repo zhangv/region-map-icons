@@ -1,7 +1,7 @@
 import { createElement } from 'react';
 import { normalize } from './core.js';
 
-export function FormaIcon({ icon, variant, size, color, strokeWidth, title, children, dangerouslySetInnerHTML, ...props }) {
+export function RegionMapIcon({ icon, variant, size, color, strokeWidth, title, children, dangerouslySetInnerHTML, ...props }) {
   const o = normalize(icon, { variant, size, color, strokeWidth, title });
   const labelled = Boolean(title || props['aria-label'] || props['aria-labelledby']);
   return createElement('svg', {

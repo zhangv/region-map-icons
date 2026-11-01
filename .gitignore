@@ -7,4 +7,6 @@ node_modules/
 lib/
 *.tgz
 
-!docs/forma-country-icons-*.tgz
+!docs/region-map-icons-*.tgz
+
+.local-*/

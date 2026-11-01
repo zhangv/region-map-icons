@@ -1,27 +1,27 @@
-# Forma Icons
+# Region Map Icons
 
 242 个国家及地区的纯矢量地图轮廓，**空心 / 实心**两种样式，共 484 个 SVG。图形内不带文字，适合大尺寸使用。
 
-**[npm 包](https://www.npmjs.com/package/forma-country-icons)** · **[在线图标库](https://zhangv.github.io/forma-icons/)** · **[下载全部 SVG](https://zhangv.github.io/forma-icons/forma-svg-library.zip)** · **[English / geometry & license](#geometry-and-coverage)**
+**[npm 包](https://www.npmjs.com/package/region-map-icons)** · **[在线图标库](https://zhangv.github.io/region-map-icons/)** · **[下载全部 SVG](https://zhangv.github.io/region-map-icons/region-map-icons-svg-library.zip)** · **[English / geometry & license](#geometry-and-coverage)**
 
 ## 安装
 
-npm 包：[`forma-country-icons`](https://www.npmjs.com/package/forma-country-icons)，当前版本 **1.1.0**：
+npm 包：[`region-map-icons`](https://www.npmjs.com/package/region-map-icons)，当前版本 **1.1.0**：
 
 ```sh
-npm install forma-country-icons
+npm install region-map-icons
 ```
 
 也可通过公开的固定版本安装包安装：
 
 ```sh
-npm install https://zhangv.github.io/forma-icons/forma-country-icons-1.1.0.tgz
+npm install https://zhangv.github.io/region-map-icons/region-map-icons-1.1.0.tgz
 ```
 
 也可以直接从 GitHub 安装（需要 Node.js 18+ 和 npm；安装时自动生成模块）：
 
 ```sh
-npm install github:zhangv/forma-icons
+npm install github:zhangv/region-map-icons
 ```
 
 React 和 Vue 为可选 peer dependencies：只需安装你使用的框架。原生 JS 不依赖任何框架。包为 ESM，包含 TypeScript 类型声明。
@@ -29,16 +29,16 @@ React 和 Vue 为可选 peer dependencies：只需安装你使用的框架。原
 ## React / Next.js
 
 ```jsx
-import { FormaIcon } from 'forma-country-icons/react';
-import china from 'forma-country-icons/icons/cn';
-import japan from 'forma-country-icons/icons/jp';
+import { RegionMapIcon } from 'region-map-icons/react';
+import china from 'region-map-icons/icons/cn';
+import japan from 'region-map-icons/icons/jp';
 
 export default function CountryArt() {
   return (
     <div>
-      <FormaIcon icon={china} variant="solid" size={360}
+      <RegionMapIcon icon={china} variant="solid" size={360}
         color="#305b47" title="中国轮廓" />
-      <FormaIcon icon={japan} variant="outline" size={320}
+      <RegionMapIcon icon={japan} variant="outline" size={320}
         strokeWidth={3} className="country-art" />
     </div>
   );
@@ -51,15 +51,15 @@ export default function CountryArt() {
 
 ```vue
 <script setup>
-import { FormaIcon } from 'forma-country-icons/vue';
-import china from 'forma-country-icons/icons/cn';
-import italy from 'forma-country-icons/icons/it';
+import { RegionMapIcon } from 'region-map-icons/vue';
+import china from 'region-map-icons/icons/cn';
+import italy from 'region-map-icons/icons/it';
 </script>
 
 <template>
-  <FormaIcon :icon="china" variant="solid" :size="360"
+  <RegionMapIcon :icon="china" variant="solid" :size="360"
     color="#305b47" title="中国轮廓" />
-  <FormaIcon :icon="italy" variant="outline" :size="320"
+  <RegionMapIcon :icon="italy" variant="outline" :size="320"
     :stroke-width="3" class="country-art" />
 </template>
 ```
@@ -69,8 +69,8 @@ import italy from 'forma-country-icons/icons/it';
 ## 原生 JavaScript（Vite / Webpack / 其他 ESM 构建工具）
 
 ```js
-import { createSvg, toSvg } from 'forma-country-icons';
-import china from 'forma-country-icons/icons/cn';
+import { createSvg, toSvg } from 'region-map-icons';
+import china from 'region-map-icons/icons/cn';
 
 // 创建 SVG DOM 元素，保留后续 JS / CSS 控制能力。
 const element = createSvg(china, {
@@ -88,18 +88,18 @@ const markup = toSvg(china, { variant: 'solid', size: 320 });
 ## 不安装 npm：直接在 HTML 引用
 
 ```html
-<img src="https://zhangv.github.io/forma-icons/svg/solid/cn.svg"
+<img src="https://zhangv.github.io/region-map-icons/svg/solid/cn.svg"
      width="360" height="360" alt="中国轮廓">
-<img src="https://zhangv.github.io/forma-icons/svg/outline/jp.svg"
+<img src="https://zhangv.github.io/region-map-icons/svg/outline/jp.svg"
      width="320" height="320" alt="日本轮廓">
 ```
 
-通用地址：`https://zhangv.github.io/forma-icons/svg/{outline|solid}/{code}.svg`。
+通用地址：`https://zhangv.github.io/region-map-icons/svg/{outline|solid}/{code}.svg`。
 
 也可以通过 Vite 等支持 SVG 资源导入的构建工具，使用 npm 中的静态文件：
 
 ```js
-import chinaUrl from 'forma-country-icons/svg/solid/cn.svg';
+import chinaUrl from 'region-map-icons/svg/solid/cn.svg';
 document.querySelector('img').src = chinaUrl;
 ```
 
@@ -115,15 +115,15 @@ document.querySelector('img').src = chinaUrl;
   width: 360px;
   height: 360px;
   background: #305b47;
-  mask: url('https://zhangv.github.io/forma-icons/svg/solid/cn.svg') center / contain no-repeat;
-  -webkit-mask: url('https://zhangv.github.io/forma-icons/svg/solid/cn.svg') center / contain no-repeat;
+  mask: url('https://zhangv.github.io/region-map-icons/svg/solid/cn.svg') center / contain no-repeat;
+  -webkit-mask: url('https://zhangv.github.io/region-map-icons/svg/solid/cn.svg') center / contain no-repeat;
 }
 </style>
 ```
 
 ## 参数与无障碍
 
-- `icon`：必填，由 `forma-country-icons/icons/<code>` 导入的图标定义。
+- `icon`：必填，由 `region-map-icons/icons/<code>` 导入的图标定义。
 - `variant`：`outline`（默认）或 `solid`。
 - `size`：默认 `256`，接受数字或 CSS 尺寸字符串，例如 `"12rem"`。
 - `color`：默认 `currentColor`，可继承父元素的 CSS `color`。
@@ -134,7 +134,7 @@ document.querySelector('img').src = chinaUrl;
 
 每个国家定义是独立 ESM 文件，React / Vue 适配器不内置整套图形。只导入需要的 `icons/cn`、`icons/jp` 等，减少应用体积。大部分使用小写 ISO 两位代码，额外地区用源数据代码区分。
 
-完整清单与名称、洲别和路径见 [data.json](https://zhangv.github.io/forma-icons/data.json)。`cn` 图形包含台湾轮廓，同时保留 `tw` 独立图标。
+完整清单与名称、洲别和路径见 [data.json](https://zhangv.github.io/region-map-icons/data.json)。`cn` 图形包含台湾轮廓，同时保留 `tw` 独立图标。
 
 ## 本地开发与发布
 

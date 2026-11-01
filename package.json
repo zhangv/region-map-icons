@@ -1,5 +1,5 @@
 {
-  "name": "forma-country-icons",
+  "name": "region-map-icons",
   "version": "1.1.0",
   "description": "242 country and region SVG silhouettes with React, Vue 3 and vanilla JavaScript support",
   "type": "module",
@@ -56,11 +56,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhangv/forma-icons.git"
+    "url": "git+https://github.com/zhangv/region-map-icons.git"
   },
-  "homepage": "https://zhangv.github.io/forma-icons/",
+  "homepage": "https://zhangv.github.io/region-map-icons/",
   "bugs": {
-    "url": "https://github.com/zhangv/forma-icons/issues"
+    "url": "https://github.com/zhangv/region-map-icons/issues"
   },
   "keywords": [
     "svg",

@@ -1,7 +1,7 @@
 /** Validate an icon definition and normalize options shared by all renderers. */
 export function normalize(icon, options = {}) {
   if (!icon || typeof icon.d !== 'string' || !/^[MLZ0-9.,\s-]+$/.test(icon.d)) {
-    throw new TypeError('Expected a Forma icon definition imported from forma-country-icons/icons/<code>');
+    throw new TypeError('Expected a Region Map icon definition imported from region-map-icons/icons/<code>');
   }
   const { variant = 'outline', size = 256, color = 'currentColor', strokeWidth = 2, title } = options;
   if (variant !== 'outline' && variant !== 'solid') throw new TypeError('variant must be outline or solid');
