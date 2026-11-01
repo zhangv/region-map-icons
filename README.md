@@ -2,17 +2,17 @@
 
 242 个国家及地区的纯矢量地图轮廓，**空心 / 实心**两种样式，共 484 个 SVG。图形内不带文字，适合大尺寸使用。
 
-**[在线图标库](https://zhangv.github.io/forma-icons/)** · **[下载全部 SVG](https://zhangv.github.io/forma-icons/forma-svg-library.zip)** · **[English / geometry & license](#geometry-and-coverage)**
+**[npm 包](https://www.npmjs.com/package/forma-country-icons)** · **[在线图标库](https://zhangv.github.io/forma-icons/)** · **[下载全部 SVG](https://zhangv.github.io/forma-icons/forma-svg-library.zip)** · **[English / geometry & license](#geometry-and-coverage)**
 
 ## 安装
 
-npm 包名：`forma-country-icons`。公开注册表发布完成后可使用：
+npm 包：[`forma-country-icons`](https://www.npmjs.com/package/forma-country-icons)，当前版本 **1.1.0**：
 
 ```sh
 npm install forma-country-icons
 ```
 
-无需等待 npm 注册表发布，可安装已经打包的版本：
+也可通过公开的固定版本安装包安装：
 
 ```sh
 npm install https://zhangv.github.io/forma-icons/forma-country-icons-1.1.0.tgz
